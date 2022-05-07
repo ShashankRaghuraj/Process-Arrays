@@ -1,0 +1,124 @@
+import java.util.ArrayList;
+
+/* You do not need to import anything for this assignment.  
+
+Your repl should contain four files:
+1. Main.java - your runner file to test your ProcessArrays objects
+2. ProcessArrays.java -- this is the primary class file
+3. TwoAnswer.java -- VERY EASY!!!  DO THIS FIRST.  You must complete the constructor and accessor methods
+4. KeyboardReader.java
+
+Good luck!
+*/
+
+class Main {
+  public static void main(String[] args)
+  {
+    //ProcessArrays tellMeHahaha = new ProcessArrays();
+    //tellMeHahaha.makeMeLaugh();
+     //testingMaxColSum();
+    // testingMaxRowSum();
+     //testCountDigits();
+     //testingRemoveEven();
+    // testingRemoveOdd();
+    // testingSort();
+    // testingSum();
+     // testingMaxColumnAndSum();
+     testingPrime();
+  }
+  public static void testingRemoveEven()
+  {
+    ProcessArrays arr = new ProcessArrays();
+    int[] arnold = {1, 2, 3, 4, 5, 6, 0};
+    ArrayList<Integer> albert = new ArrayList<Integer>();
+    albert.add(1);
+    albert.add(2);
+    albert.add(3);
+    albert.add(4);
+    albert.add(5);
+    albert.add(-1);
+    albert.add(-2);
+    albert.add(0);
+    arr.remove(arnold, albert, 2);
+  }
+  public static void testingRemoveOdd()
+  {
+    ProcessArrays arr = new ProcessArrays();
+    int[] arnold = {1, 2, 3, 4, 5, 6};
+    ArrayList<Integer> albert = new ArrayList<Integer>();
+    albert.add(1);
+    albert.add(2);
+    albert.add(4);
+    albert.add(5);
+    arr.remove(arnold, albert, 3);
+  }
+  public static void testingSort()
+  {
+    ProcessArrays arr = new ProcessArrays();
+    int[] arnold = {-1, -20, -3, -4, -5, -6, 0};
+    ArrayList<Integer> albert = new ArrayList<Integer>();
+    albert.add(-1);
+    albert.add(5);
+    albert.add(4);
+    albert.add(2);
+    albert.add(0);
+    arr.sortUs(arnold, albert);
+  }
+  public static void testingSum()
+  {
+    ProcessArrays arr = new ProcessArrays();
+    //int[] arnold = {0, -20, 20, 5, -5, -6};
+    int[] arnold = {-1};
+    ArrayList<Integer> albert = new ArrayList<Integer>();
+    albert.add(-1);
+    albert.add(5);
+    albert.add(4);
+    albert.add(2);
+    System.out.println("Albert Sum: " + arr.sum(arnold, albert).getanswer1() + "\nArnold Sum: " + arr.sum(arnold, albert).getanswer2());
+  }
+  public static void testingMaxColumnAndSum()
+  {
+    ProcessArrays arr = new ProcessArrays();
+    int[][] maxColRow = { {1,2,3,4,5}, {-1,-2,-3,-4,-5}, {10,20,30,40,50}   };
+    System.out.println("Max Row Sum: " + arr.largest(maxColRow).getanswer1() + "\nMax col sum: " + arr.largest(maxColRow).getanswer2());
+    
+  }
+  public static void testingMaxColSum()
+  {
+    ProcessArrays arr = new ProcessArrays();
+    int[][] testSumArr = {{1, 2, 3, 4}, {5,6,7,8}};
+    System.out.println(arr.maxColumnSum(testSumArr));
+  }
+  public static void testingMaxRowSum()
+  {
+    ProcessArrays arr = new ProcessArrays();
+    int[][] testSumArr = {{-1, 2, 3, 4}, {5,-6,7,8}};
+    System.out.println(arr.maxRowSum(testSumArr));
+  }
+  public static void testCountDigits()
+  {
+    ProcessArrays arr = new ProcessArrays();
+    int[] arnold = {1, 2, 2, 33, 344, 4, 4, 5};
+    ArrayList<Integer> albert = new ArrayList<Integer>();
+    albert.add(5555);
+    albert.add(60);
+    int[] displayArr = arr.countDigits(arnold, albert);
+    for(int i = 0; i < 10; i++)
+    {
+      System.out.println(displayArr[i]);
+    }
+  }
+  public static void testingPrime()
+  {
+    ProcessArrays arr = new ProcessArrays();
+    int[] arnold = {1, 2, 3};
+    ArrayList<Integer> albert = new ArrayList<Integer>();
+    albert.add(0);
+    //albert.add(2);
+    //albert.add(3);
+    boolean result = arr.isPrime(arnold, albert);
+    
+    System.out.println(result);
+    
+  }
+}
